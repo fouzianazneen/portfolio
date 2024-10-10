@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "role": "Frontend Developer",
+        "organisation": "Dcrypt",
+        "startDate": "June, 2024",
+        "endDate": "Aug, 2024",
+        "experiences":
+        [
+            "Developed a responsive web application using React, enhancing user experience through intuitive design and smooth navigation.",
+    "Collaborated with cross-functional teams to gather requirements and deliver user-friendly features, ensuring alignment with business goals.",
+    "Identified and resolved performance bottlenecks, resulting in a 30% increase in application load speed.",
+    "Utilized Git for version control and participated in code reviews to maintain code quality.",
+    "Conducted user testing sessions to gather feedback on new features, leading to iterative improvements in the product.",
+    "Gained proficiency in state management using Redux, improving application scalability and maintainability."
+        ],
+        "imgSrc": "company/dcrypt.png"
+    }
+]
