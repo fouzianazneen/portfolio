@@ -15,11 +15,11 @@ const Contact = () => {
          data-aos="zoom-in-up"
          data-aos-duration="1000" >
           <a href='https://www.google.com/' target='_blank' className="items"><FaInstagramSquare className='icons' /></a>
-          <a href='https://www.google.com/' target='_blank' className="items"><FaLinkedin  className='icons'/>
+          <a href='https://www.linkedin.com/in/fouzia-nazneen-a82162215/' target='_blank' className="items"><FaLinkedin  className='icons'/>
           </a > 
           <a href='' target='_blank' className="items"><FaSquareXTwitter  className='icons'/>
           </a > 
-          <a  href='' target='_blank' className="items"><FaGithub className='icons'/>
+          <a  href='https://github.com/fouzianazneen' target='_blank' className="items"><FaGithub className='icons'/>
           </a > 
           <a href='mailto:fouzianazneen1216@gmail.com' target='_blank' className="items"><IoMdMail className='icons'/>
           </a >

@@ -4,7 +4,7 @@ import skills from "./data/skills.json";
 const Skills = () => {
   return (
     <>
-      <div className="container skills" >
+      <div className="container skills" id="skills">
         {/* <div className="container skills"></div> */}
         <h1>SKILLS</h1>
          <div className="items"
@@ -12,7 +12,7 @@ const Skills = () => {
           data-aos-duration="1000" >
         {skills.map((data) => (
           <>
-            <div className="item"  id="skills" key={data.id}>
+            <div className="item"   key={data.id}>
               {/* <div className="item"> */}
                 <img src={`/assests/${data.imageSrc}`} alt="" />
                 <h3>{data.title}</h3>
