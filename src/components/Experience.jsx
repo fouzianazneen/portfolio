@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 import React from 'react';
 import experience from './data/experience.json';
 
