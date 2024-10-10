@@ -3,6 +3,8 @@
 
 
 
+
+
 import React, { useEffect, useRef } from "react";
 import pdf from "../pdf/resume.pdf";
 import image from "./data/image.json";
@@ -55,8 +57,7 @@ const Home = () => {
           data-aos-duration="1000"
         >
           <div className="img">
-            {/* Corrected the path to /assets/ */}
-            <img src={`/assets/${image.imgSrc}`} alt="profile image" />
+            <img src={`/${image.imgSrc}`} alt="profile image" />
           </div>
         </div>
       </div>
