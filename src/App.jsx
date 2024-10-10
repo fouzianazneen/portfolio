@@ -18,7 +18,7 @@ const App = () => {
   return (
   <>
   < Navbar />
-  <div className="container">
+  <div className="container" style={{ paddingTop: '100px' }}>
     <Home />
     < Experience />
     <Skills />

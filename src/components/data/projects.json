@@ -3,28 +3,22 @@
         "key": 1,
         "title": "X Tweet",
          "imageSrc": "projects/xtweet.png",
-        "description": "This is a project with MERN Stack",
+        "description": "A social media platform built with the MERN stack.",
         "demo": "https://mini-project-ypqy.onrender.com/login"
     },
     {
         "key": 2,
         "title": "EduHub",
         "imageSrc": "projects/eduhub.png",
-        "description": "This is a project with MERN Stack",
+        "description": "An educational resource center developed using the MERN stack.",
         "demo": "https://education-resource-center-mern-front.onrender.com"
     },
     {
         "key": 3,
         "title": "Recipe Finder",
         "imageSrc": "projects/recipe.png",
-        "description": "This is a project with MERN Stack",
+        "description": "A web app for discovering and saving recipes.",
         "demo": "https://recipe-finder-app-y9tx.onrender.com/"
-    },
-    {
-        "key": 4,
-        "title": "Task Management System",
-        "imageSrc": "",
-        "description": "This is a project with MERN Stack",
-        "demo": ""
     }
+  
 ]

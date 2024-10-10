@@ -10,51 +10,143 @@ body {
 
 /* Navbar Section */
 
-a {
-  text-decoration: none;
-  color: white;
+
+
+/* Base styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  transition: top 0.3s;
+  z-index: 1000;
 }
 
-.nav_bar {
+/* New class for hiding navbar */
+.navbar-hidden {
+  top: -100px;
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 1.3rem; */
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.nav_bar .nav_items {
+.navbar-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
   padding: 16px;
   font-size: 1.2rem;
   font-weight: bold;
+  transition: border-bottom 0.3s;
 }
 
-.nav_bar .nav_items:hover {
+.nav-item:hover {
   border-bottom: 3px solid yellow;
 }
 
-/* Home section */
+/* New styles for mobile menu toggle */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
 
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 2px 0;
+  transition: 0.4s;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    /* border: 1px solid yellow; */
+    padding: 1rem;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgb(228, 228, 149);
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+/* Home section */
+/* Home section */
 .home {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80vh;
+  height: 80vh; /* Adjust as necessary */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Left Side */
 .home .left {
   background-color: var(--bg-color);
-  width: 620px;
+  flex: 1; 
+  max-width: 620px; /* Maintain a maximum width */
   text-align: center;
   padding: 30px;
   border-radius: 10px;
   border: 1px solid yellow;
-  box-shadow: var(--box-shadow) ;
+  box-shadow: var(--box-shadow);
+  margin: 0 20px; 
+  /* Ensure it's centered */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center the content */
 }
+.home .left h1 {
+  text-decoration: none; /* Remove any text decorations */
+}
+
+/* Right Side */
+.home .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Allow it to grow */
+  max-width: 300px; /* Maintain a maximum width */
+  margin: 20px; /* Add margin */
+}
+
 .home .right .img {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: yellow; */
 }
 
 .home .right .img img {
@@ -65,73 +157,138 @@ a {
   animation-name: super;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-
 }
 
-
-
+/* Keyframes for animation */
 @keyframes super {
-  0%
-  {
-border-color: blue;
-transform:translate(0, 0px);
-box-shadow: 10px 10px 100px 50px blue;
+  0% {
+    border-color: blue;
+    transform: translate(0, 0);
+    box-shadow: 10px 10px 100px 50px blue;
   }
-  
   25% {
     border-color: rgb(239, 244, 11);
-    /* transform:translate(0, 0px); */
     box-shadow: 10px 10px 100px 50px rgb(239, 244, 11);
   }
-50% {
-  border-color: rgb(12, 12, 199);
-transform:translate(0, 0px);
-box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
-}
-  75%{
+  50% {
+    border-color: rgb(12, 12, 199);
+    transform: translate(0, 0);
+    box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
+  }
+  75% {
     border-color: rgb(130, 217, 160);
-    /* transform:translate(0, 0px); */
     box-shadow: 10px 10px 100px 50px rgb(130, 217, 160);
   }
   100% {
     border-color: rgb(50, 55, 205);
-    transform:translate(0, -0px);
+    transform: translate(0, -0);
     box-shadow: 10px 10px 100px 50px rgb(50, 55, 205);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) { /* Tablet view */
+  .home {
+    height: auto; /* Allow height to adjust on smaller screens */
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .home .left, .home .right {
+    width: 100%; /* Full width for both sections */
+    max-width: none; /* Remove max-width for flexibility */
+  }
+
+  .home .right .img img {
+    height: 200px; /* Reduce image size for better fit */
+    width: 200px; /* Adjust width */
+    animation-duration: 2s; /* Speed up animation for smaller screens */
+  }
+}
+
+@media (max-width: 767px) { /* Mobile view */
+  .home {
+    height: auto; /* Allow height to adjust */
+  }
+  
+  .home .left, .home .right {
+    width: 100%; /* Full width */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .home .right .img img {
+    height: 150px; /* Further reduce image size for mobile */
+    width: 150px; /* Adjust width */
+    animation-duration: 1.5s; /* Speed up animation for smaller screens */
   }
 }
 
 
 
 
+/* experoence */
 
-
-/* experience section */
-
-.ex{
-  width: 900px;
+/* General styles for the experience section */
+.container.ex {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically if needed */
+  max-width: 1200px; /* Set a max width */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding for spacing */
 }
 
+/* Styles for experience items */
+.ex-items {
+  display: flex; /* Use flexbox for the item layout */
+  align-items: center; /* Center items vertically within each item */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Allow items to fill the container */
+  margin: 20px; /* Vertical spacing */
+  padding: 20px; /* Padding around each item */
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  border: 1px solid yellow ;
+  box-shadow: var(--box-shadow);
+}
+
+/* Left and right sections */
+.left {
+  flex: 0 0 100px; /* Fixed width for the image section */
+  margin-right: 20px; /* Space between image and text */
+}
+
+
 .left img{
-  width: 70px;   /* Set a fixed width */
+  width: 70px;   
   height: auto;
   margin-right: 20px;
   border-radius: 10px;
   border: 1px solid yellow ;
-  /* box-shadow: var(--box-shadow); */
+ 
 }
 
-.ex-items
-{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--bg-color);
-  margin: 20px;
-  padding: 13px;
-  width:800px;
-  border-radius: 10px;
-  border: 1px solid yellow ;
-  box-shadow: var(--box-shadow);
+
+
+.right {
+  flex: 1; /* Take remaining space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .ex-items {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center items in the middle */
+  }
+  .left {
+    margin: 0 0 10px 0; /* Margin adjustments for mobile */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ex-items {
+    flex-direction: row; /* Keep items in a row on tablets */
+  }
 }
 
 
@@ -140,36 +297,160 @@ box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
 /*skills */ 
 
 
-
+/* Skills section */
 .skills {
-  width: 900px;
-  /* background-color: wheat; */
+  max-width: 900px; /* Use max-width instead of width */
+  margin: auto; /* Center the skills container */
 }
 
-.skills .items{
+.skills .items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 700px;
   margin: auto;
-  /* background-color: yellow; */
 }
 
 .skills .items .item {
-width: calc(33.33%);
-background-color: black;
-margin: 40px;
-text-align: center;
-padding: 20px;
-border-radius: 10px;
-border: 1px solid yellow;
-box-shadow: var(--box-shadow);
+  width: calc(33.33% - 60px); /* 3 items in a row with margin consideration */
+  background-color: black;
+  margin: 30px; /* Reduced margin for better spacing */
+  text-align: center;
+  /* font-size: small; */
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ensure content is vertically centered */
+  align-items: center; /* Ensure content is horizontally centered */
 }
 
-.skills .items .item img{
+.skills .items .item img {
   width: 70px;
+  margin-bottom: 10px; /* Add spacing below the image */
 }
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .skills .items .item {
+    width: calc(50% - 40px); /* 2 items in a row on tablets */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .skills .items .item {
+    width: calc(100% - 40px); /* 1 item in a row on mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*projects */
+
+.container.projects {
+  margin: 20px auto; /* Center the projects container */
+}
+
+.card {
+  background-color: black; /* Card background color */
+  color: white; /* Text color */
+  border: 1px solid yellow; /* Card border */
+  box-shadow: 5px 5px 10px rgba(101, 175, 10, 0.5); /* Shadow effect */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space out items */
+  height: 100%; /* Ensure cards take full height */
+}
+
+.img-container {
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  padding: 10px; 
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+  /* height: 200px;  */
+  object-fit: cover; /* Maintain aspect ratio while covering */
+  border: 2px solid yellow; /* Image border */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.card-body {
+  padding: 15px; /* Adjust padding for the card body */
+  flex-grow: 1; /* Allow card body to take remaining space */
+  display: flex; /* Use flexbox for card body */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items to the top */
+}
+
+
+
+.card-title {
+  text-decoration: underline;
+  text-decoration-color: rgb(170, 108, 227);
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.card-text {
+  flex-grow: 1; /* Allow the text to take remaining space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .img-container img {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -209,3 +490,19 @@ box-shadow: var(--box-shadow);
 .contact-icon .items .icons {
   font-size: 2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

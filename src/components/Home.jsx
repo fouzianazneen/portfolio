@@ -3,6 +3,7 @@ import pdf from "../pdf/resume.pdf";
 import image from "./data/image.json";
 import Typed from "typed.js";
 
+
 const Home = () => {
   const typedRef = useRef(null);
   useEffect(() => {
@@ -32,7 +33,6 @@ const Home = () => {
          data-aos-duration="1000" >
           <h1 ref={typedRef}></h1>
 
-          {/* Correctly reference the pdf variable without single quotes */}
           <a
             href={pdf}
             download="resume.pdf"

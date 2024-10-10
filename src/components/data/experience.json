@@ -7,12 +7,10 @@
         "endDate": "Aug, 2024",
         "experiences":
         [
-            "Developed a responsive web application using React, enhancing user experience through intuitive design and smooth navigation.",
-    "Collaborated with cross-functional teams to gather requirements and deliver user-friendly features, ensuring alignment with business goals.",
-    "Identified and resolved performance bottlenecks, resulting in a 30% increase in application load speed.",
-    "Utilized Git for version control and participated in code reviews to maintain code quality.",
-    "Conducted user testing sessions to gather feedback on new features, leading to iterative improvements in the product.",
-    "Gained proficiency in state management using Redux, improving application scalability and maintainability."
+           "Worked as part of a team to design and develop a user-friendly dashboard using React.",
+           "Collaborated closely with backend developers to integrate APIs, ensuring seamless data communication between the frontend and backend.",
+           "Focused on enhancing performance and user experience by optimizing load times and ensuring responsive design across devices.",
+           "Actively participated in feature development, problem-solving, and testing to deliver a polished, high-quality product."
         ],
         "imgSrc": "company/dcrypt.png"
     }
