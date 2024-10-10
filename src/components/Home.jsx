@@ -45,7 +45,8 @@ const Home = () => {
          data-aos="fade-up-left"
          data-aos-duration="1000" >
           <div className="img">
-            <img src={`/assests/${image.imgSrc}`} alt="image" />
+          <img src={`${process.env.PUBLIC_URL}/assets/image.png`} alt="image" />
+
           </div>
         </div>
       </div>
