@@ -16,13 +16,14 @@ const Projects = () => {
                 className="my-4 col-sm-6 col-md-4 col-lg-3 mx-3"
               >
                 <div
-                  className="card bg-dark text-light"
+                  className="card bg-black text-light"
                   style={{ width: "18rem", border: "1px solid yellow", boxShadow: "5px 5px 10px 10px rgba(101, 175, 10, 0.5)" }}
                 
                 >
                   <div className="img d-flex justify-content-center align-content-center p-3"
                   >
-                  <img src={data.imageSrc} className="card-img-top" alt="..."  style={{
+                      {/* <img src={`/assests/${data.imageSrc}`} alt="" /> */}
+                  <img src={`/assests/${data.imageSrc}`} className="card-img-top" alt="..."  style={{
                     width: '250px',
                     height: '200px',
                     border: '2px solid yellow',

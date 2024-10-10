@@ -2,27 +2,27 @@
     {
         "key": 1,
         "title": "X Tweet",
-        "imageSrc": "",
+         "imageSrc": "projects/xtweet.png",
         "description": "This is a project with MERN Stack",
         "demo": "https://mini-project-ypqy.onrender.com/login"
     },
     {
         "key": 2,
         "title": "EduHub",
-        "imageSrc": "",
+        "imageSrc": "projects/eduhub.png",
         "description": "This is a project with MERN Stack",
-        "demo": ""
+        "demo": "https://education-resource-center-mern-front.onrender.com"
     },
     {
         "key": 3,
-        "title": "Task Management System",
-        "imageSrc": "",
+        "title": "Recipe Finder",
+        "imageSrc": "projects/recipe.png",
         "description": "This is a project with MERN Stack",
-        "demo": ""
+        "demo": "https://recipe-finder-app-y9tx.onrender.com/"
     },
     {
         "key": 4,
-        "title": "Recipe Finder",
+        "title": "Task Management System",
         "imageSrc": "",
         "description": "This is a project with MERN Stack",
         "demo": ""
