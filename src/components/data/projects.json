@@ -1,0 +1,30 @@
+[
+    {
+        "key": 1,
+        "title": "X Tweet",
+        "imageSrc": "",
+        "description": "This is a project with MERN Stack",
+        "demo": "https://mini-project-ypqy.onrender.com/login"
+    },
+    {
+        "key": 2,
+        "title": "Educational Resource Center",
+        "imageSrc": "",
+        "description": "This is a project with MERN Stack",
+        "demo": ""
+    },
+    {
+        "key": 3,
+        "title": "Task Management System",
+        "imageSrc": "",
+        "description": "This is a project with MERN Stack",
+        "demo": ""
+    },
+    {
+        "key": 4,
+        "title": "Recipe Finder",
+        "imageSrc": "",
+        "description": "This is a project with MERN Stack",
+        "demo": ""
+    }
+]
