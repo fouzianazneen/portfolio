@@ -129,3 +129,40 @@ box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
   border: 1px solid yellow ;
   box-shadow: var(--box-shadow);
 }
+
+
+
+
+/*skills */ 
+
+
+
+.skills {
+  width: 900px;
+  /* background-color: wheat; */
+}
+
+.skills .items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 700px;
+  margin: auto;
+  /* background-color: yellow; */
+}
+
+.skills .items .item {
+width: calc(33.33%);
+background-color: black;
+margin: 40px;
+text-align: center;
+padding: 20px;
+border-radius: 10px;
+border: 1px solid yellow;
+box-shadow: var(--box-shadow);
+}
+
+.skills .items .item img{
+  width: 70px;
+}
