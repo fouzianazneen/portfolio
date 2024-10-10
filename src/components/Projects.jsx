@@ -4,7 +4,7 @@ import project from "./data/projects.json";
 const Projects = () => {
   return (
     <>
-      <div className="container projects my-3" id="projects">
+      <div className="container projects my-3" id="projects" >
         <h1>PROJECTS</h1>
         <div className="row d-flex justify-content-center align-content-center"
          data-aos="flip-right"
@@ -18,8 +18,10 @@ const Projects = () => {
                 <div
                   className="card bg-dark text-light"
                   style={{ width: "18rem", border: "1px solid yellow", boxShadow: "5px 5px 10px 10px rgba(101, 175, 10, 0.5)" }}
+                
                 >
-                  <div className="img d-flex justify-content-center align-content-center p-3">
+                  <div className="img d-flex justify-content-center align-content-center p-3"
+                  >
                   <img src={data.imageSrc} className="card-img-top" alt="..."  style={{
                     width: '250px',
                     height: '200px',

@@ -112,8 +112,12 @@ box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
 }
 
 .left img{
-  width: 50px;   /* Set a fixed width */
+  width: 70px;   /* Set a fixed width */
   height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: 1px solid yellow ;
+  /* box-shadow: var(--box-shadow); */
 }
 
 .ex-items
